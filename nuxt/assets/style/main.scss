@@ -1,0 +1,6 @@
+@import '~vuetify/src/styles/styles.sass'
+
+.valid-text
+  color: map-get($green, 'base')
+.invalid-text
+  color: map-get($red, 'base')

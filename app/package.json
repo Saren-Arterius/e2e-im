@@ -1,0 +1,41 @@
+{
+  "name": "e2e-im",
+  "version": "0.0.0",
+  "private": true,
+  "nodemonConfig": {
+    "watch": [
+      "app/src/*"
+    ]
+  },
+  "scripts": {
+    "start": "sh -c 'cd app/dist && node bin/server.js'",
+    "clean": "rm -rf dist && mkdir dist",
+    "dev": "npm run build-watch & sleep 5 && nodemon --exec sh -c 'npm start'",
+    "prod": "npm run build && npm start",
+    "build": "babel app/src --out-dir app/dist --copy-files",
+    "build-watch": "babel app/src --out-dir app/dist --copy-files --watch"
+  },
+  "dependencies": {
+    "@hapi/boom": "^8.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.14.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "object-assign-deep": "^0.4.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-react": "^7.5.1"
+  }
+}
