@@ -11,7 +11,7 @@ export const configProd = {
   },
   trustedHosts: {
     localhost: true,
-    'e2e-im-api.wtako.net': true
+    'e2e-im.wtako.net': true
   },
   tokenExpireInSeconds: 3600
 };
