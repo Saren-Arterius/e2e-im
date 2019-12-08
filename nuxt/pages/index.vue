@@ -130,7 +130,7 @@ export default {
               if (!c.generatingPSK) return;
               this.$set(c, 'generatingPSK', false);
               this.snackbar = true;
-              this.snackbarText = 'Recipient offline or duplicate login';
+              this.snackbarText = `@${r} is offline, please retry`;
               if (r === this.recipientUsername) {
                 this.recipientUsername = null;
               }
