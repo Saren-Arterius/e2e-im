@@ -69,8 +69,8 @@ export default {
     snackbar: false,
     loginValid: false,
     loggingIn: false,
-    username: "User",
-    password: "password",
+    username: '',
+    password: '',
     profile: null,
     socket: null,
     pickedUsername: null,
@@ -137,7 +137,7 @@ export default {
     }
   },
   async mounted () {
-    setTimeout(this.login, 5000);
+    // setTimeout(this.login, 5000);
   },
   methods: {
     moment (...args) {
