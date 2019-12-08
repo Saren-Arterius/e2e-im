@@ -292,9 +292,9 @@ export default {
         username: this.username,
         password
       });
+      this.loggingIn = false;
       if (!token) return;
       this.setupIO(token);
-      this.loggingIn = false;
     }
   }
 };
